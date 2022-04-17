@@ -13,7 +13,16 @@ public class Game_Manager : MonoBehaviour
     public GameObject checkerObject;
 
     //Board
-    int[,] board = new int[8,8];
+    int[,] board = new int[,] { 
+                                { -1, 0, -1, 0, -1, 0, -1, 0 },
+                                { 0, -1, 0, -1, 0, -1, 0, -1 },
+                                { -1, 0, -1, 0, -1, 0, -1, 0 },
+                                { -1, -1, -1, -1, -1, -1, -1, -1 },
+                                { -1, -1, -1, -1, -1, -1, -1, -1 },
+                                { 1, -1, 1, -1, 1, -1, 1, -1 },
+                                { -1, 1, -1, 1, -1, 1, -1, 1 },
+                                { 1, -1, 1, -1, 1, -1, 1, -1 },
+                              };
     
 
     // Start is called before the first frame update
@@ -39,17 +48,29 @@ public class Game_Manager : MonoBehaviour
                     Debug.Log("Set turn to player: 1");
                     playerTurn = 0;
                     break;
-            }
+        }
         //}
     }
     private void SetUpBoard()
     {
-        float boardOffsetX = -3.5f;
-        float boardOffsetY = -3.5f;
+        float boardOffsetX = 3.5f;
+        float boardOffsetY = 3.5f;
 
-        //Spawn Gray Team Checkers
-
-        //Spawn Red Team Checkers
+        for (int i = 0; i < board.GetLength(0); i++)
+        {
+            for (int j = 0; j < board.GetLength(1); j++)
+            {
+                if (board[i,j] == 0)
+                {
+                    Instantiate(checkerObject, new Vector3(j - boardOffsetX, i - boardOffsetY, 0), Quaternion.identity);
+                    
+                }
+                else if (board[i, j] == 1)
+                {
+                    Instantiate(checkerObject, new Vector3(j - boardOffsetX, i - boardOffsetY, 0), Quaternion.identity);
+                }
+            }
+        }
     }
 
 }

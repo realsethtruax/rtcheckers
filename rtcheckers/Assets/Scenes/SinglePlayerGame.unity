@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d86076057af4440b63d00daacf896b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkerObject: {fileID: 0}
+  checkerObject: {fileID: 6592333886356539208, guid: 80fbae6dee65e924582401b540eb9241, type: 3}
 --- !u!4 &1150490853
 Transform:
   m_ObjectHideFlags: 0
