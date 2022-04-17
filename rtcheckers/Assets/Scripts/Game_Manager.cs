@@ -12,18 +12,22 @@ public class Game_Manager : MonoBehaviour
     //Checker Game Object
     public GameObject checkerObject;
 
+    //Board
+    int[,] board = new int[8,8];
+    
+
     // Start is called before the first frame update
     void Start()
     {
         playerTurn = 0;
+
         SetUpBoard();
-        Instantiate(checkerObject, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (gameOver == false) {
+        //while (gameOver == false) {
             switch (playerTurn) {
                 case 0:
                     //Player 0 Turn Logic
@@ -36,11 +40,16 @@ public class Game_Manager : MonoBehaviour
                     playerTurn = 0;
                     break;
             }
-        }
+        //}
     }
     private void SetUpBoard()
     {
-        
+        float boardOffsetX = -3.5f;
+        float boardOffsetY = -3.5f;
+
+        //Spawn Gray Team Checkers
+
+        //Spawn Red Team Checkers
     }
 
 }
