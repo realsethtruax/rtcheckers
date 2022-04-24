@@ -8,7 +8,7 @@ public class Board : MonoBehaviour
     private TileBase redTile;
     private TileBase grayTile;
 
-    public void Instantiate(int rows, int columns, Tilemap map, Vector3Int offset)
+    public void Instantiate(int rows, int columns, Tilemap map)
     {
         for (int row = 0; row < rows; row++)
         {
@@ -24,15 +24,5 @@ public class Board : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void setGrayTile(TileBase tile)
-    {
-        this.grayTile = tile;
-    }
-
-    public void setRedTile(TileBase tile)
-    {
-        this.redTile = tile;
     }
 }

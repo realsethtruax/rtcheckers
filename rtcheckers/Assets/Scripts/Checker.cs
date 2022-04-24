@@ -5,5 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class Checker : MonoBehaviour
 {
+    bool isKing = false;
 
 }
