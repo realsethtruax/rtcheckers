@@ -44,6 +44,9 @@ TagManager:
   - name: Board
     uniqueID: 1199369239
     locked: 0
+  - name: Ghost
+    uniqueID: 3188296351
+    locked: 0
   - name: Checkers
     uniqueID: 2957505205
     locked: 0
